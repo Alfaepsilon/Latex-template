@@ -1,0 +1,44 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{pgf}
+\usepackage{wrapfig}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{datetime}
+\usepackage{minted}
+\usepackage{color}
+\usepackage{eso-pic}
+\pagestyle{fancy}
+% Create header and footer
+\headheight 27pt
+\pagestyle{fancyplain}
+\usepackage{filecontents}
+\begin{filecontents*}{refs.bib}
+\end{filecontents*}
+\usepackage[style=authoryear, firstinits=true, backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+% Create title page
+\title{Lab Report}
+\subtitle{NSARG21h Course Name, Course Code}
+\author{Henrik Cassé    e20henca}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\AddToShipoutPicture*
+    {\put(500, 700){\includegraphics[width=3cm,height=2cm]{nsa.png}}}
+
+\pagebreak
+\tableofcontents
+\thispagestyle{empty}
+\pagebreak
+
+\setcounter{page}{1}
+\section{Introduction}
+
+\end{document}
